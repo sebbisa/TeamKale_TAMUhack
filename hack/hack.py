@@ -2,13 +2,29 @@ import pygame
 import random
 import sys
 
-Initialize Pygame
+# Initialize pygame
 pygame.init()
 
 # # Set up display
 width, height = 700, 300
-# screen = pygame.display.set_mode((width, height))
-# pygame.display.set_caption("Guess the Number")
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("Guess the Number")
+
+#create game window
+
+bg_image = pygame.image.load('assets/photo_of_bomb.jpeg').convert_alpha()
+
+# game loop
+run = True
+while run:
+
+    #event handler
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+
+pygame.quit()
+
 
 # # Colors
 # white = (255, 255, 255)
