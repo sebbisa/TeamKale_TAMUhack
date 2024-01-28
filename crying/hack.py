@@ -6,9 +6,9 @@ import sys
 pygame.init()
 
 # # Set up display
-width, height = 700, 300
+width, height = 800, 800
 screen = pygame.display.set_mode((width, height))
-pygame.display.set_caption("Guess the Number")
+pygame.display.set_caption("Brain Blast")
 
 #create game window
 
@@ -18,10 +18,15 @@ bg_image = pygame.image.load('assets/photo_of_bomb.jpeg').convert_alpha()
 run = True
 while run:
 
+    # draw background
+    screen.blit(bg_image, (0,0))
     #event handler
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
+
+    # update display window
+    pygame.display.update()
 
 pygame.quit()
 
